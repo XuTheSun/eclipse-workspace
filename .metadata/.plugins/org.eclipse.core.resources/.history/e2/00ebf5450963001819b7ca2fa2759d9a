@@ -1,0 +1,14 @@
+package com.guanxu.easy;
+
+public class WordPatten {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	public boolean wordPatten(String proto, String data) {
+		
+		return true;
+	}
+}

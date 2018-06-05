@@ -1,0 +1,27 @@
+package com.guanxu.easy;
+
+public class MinimumMovesToEqualArrayElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+    public static int minMoves(int[] nums) {
+        // Write your code here
+    	int result = 0;
+    	while(!checkArray(nums)) {
+    		
+    	}
+    	return 0;
+    }
+    
+    public static boolean checkArray(int[] nums) {
+    	return false;
+    }
+    
+    public static void plusOne(int[] nums) {
+    	
+    }
+	
+}

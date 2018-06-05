@@ -1,0 +1,16 @@
+package com.guanxu.easy;
+
+public class LetterCasePermutation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+    public List<String> letterCasePermutation(String S) {
+        // write your code here
+    	
+    	return null;
+    }
+
+}

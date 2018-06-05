@@ -1,0 +1,38 @@
+package com.guanxu.easy;
+
+public class ValidWordSquare {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		String[] a = new String[]{"abcd", "bnrt", "crmy","dtye"};
+		System.out.println(validWordSquare(a));
+	}
+	
+    public static boolean validWordSquare(String[] words) {
+    	for(int i = 0; i < words.length; i++) {
+    		if(!readColumn(words, i).equals(readLine(words, i)))
+    			return false;
+    	}
+    	return true;
+    }
+    
+    public static String readColumn(String[] words, int index){
+        StringBuilder builder = new StringBuilder();
+        for(int i = 0; i < words.length; i++){
+            try {
+                char a = words[i].charAt(index);
+                builder.append(a+"");
+            } 
+            catch(StringIndexOutOfBoundsException e) {
+            }
+        }
+        return builder.toString();
+    }
+    
+    public static String readLine(String[] words, int index){
+        if(index >= words.length)
+            return "";
+        return words[index];
+    }
+
+}

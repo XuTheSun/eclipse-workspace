@@ -1,0 +1,40 @@
+package com.guanxu.easy;
+
+public class AddString {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print(addStrings("123", "456"));
+	}
+	
+    public static String addStrings(String num1, String num2) {
+        // write your code here
+        int size = Math.max(num1.length(),num2.length());
+        int[] result = new int[size + 1];
+        int res = 0;
+        for(int i = 0; i< size; i++){
+            int a = 0;
+            int b = 0;
+            if(i < num1.length()){
+                a = num1.charAt(i) - '0';
+            }
+            if(i < num2.length()){
+                b = num2.charAt(i) - '0';
+            }
+            result[i] = a + b;
+        }
+        
+        for(int j = 0; j < result.length; j++){
+            if((result[j]/10) > 0){
+                result[j + 1] += result[j]/10;
+                result[j] = result[j]%10;
+            }
+        }
+        
+        for(int k = 0; k < result.length; k++){
+            res += result[result.length - k - 1]*(int)(Math.pow(10,k));
+        }
+        return res+"";
+    }
+
+}

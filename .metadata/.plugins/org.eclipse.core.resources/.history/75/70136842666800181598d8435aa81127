@@ -1,0 +1,59 @@
+package com.guanxu.easy;
+
+public class ToeplitzMatrix {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+	}
+	
+    public static boolean isToeplitzMatrix(int[][] matrix) {
+        // Write your code here
+    	if(matrix.length <= 0) {
+    		return false;
+    	}else {
+    		if(matrix[0].length <= 0)
+    			return false;
+    	}
+        boolean isXMax = false;
+        int x = 0;
+        int y = matrix.length - 1;
+        while(true){
+            if(x >=  matrix[0].length){
+                isXMax = true;
+            }
+            if(y < 0){
+                break;
+            }
+            if(!isXMax){
+            	if(!checkArray(getDiagonalArray(matrix, x, y)))
+            		return false;
+                x++;
+            }else{
+            	if(!checkArray(getDiagonalArray(matrix, x, y)))
+            		return false;
+                y--;
+            }
+            i++;
+        }
+        return true;
+    }
+    public static int[] getDiagonalArray(int[][]maxtrix, int x, int y){
+        int[] result = new int[maxtrix[0].length];
+        int i = 0;
+        while(true) {
+        	result[i] = maxtrix[y][x];
+        	if(x < 0 || y < 0)
+        		break;
+        }
+        return result;
+    }
+    public static boolean checkArray(int[] array) {
+    	for(int i = 0; i < array.length - 1; i++) {
+    		if(array[i] != array[i+1])
+    			return false;
+    	}
+    	return true;
+    }
+
+}

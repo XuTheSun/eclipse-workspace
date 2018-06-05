@@ -1,0 +1,41 @@
+package com.guanxu.easy;
+
+public class MinimumMovesToEqualArrayElements {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] a = {1,2,3,5,62,4,5,12};
+		System.out.println(checkArray(new int[]{1,1,1,1}));
+		plusOne(a);
+	}
+
+    public static int minMoves(int[] nums) {
+        // Write your code here
+    	int result = 0;
+    	while(!checkArray(nums)) {
+    		result++;
+    		plusOne(nums);
+    	}
+    	return result;
+    }
+    
+    public static boolean checkArray(int[] nums) {
+    	for(int i = 0; i < nums.length - 1; i++) {
+    		if(nums[i] != nums[i+1]) 
+    			return false;
+    	}
+    	return true;
+    }
+    
+    public static void plusOne(int[] nums) {
+    	int maxIndex = 0;
+    	for(int i = 0; i < nums.length; i++) {
+    		if(nums[i] > nums[maxIndex])
+    			maxIndex = i;
+    		nums[i]++;
+    	}
+    	System.out.println(maxIndex);
+    	nums[maxIndex]--;
+    }
+	
+}

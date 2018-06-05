@@ -1,0 +1,22 @@
+package com.guanxu.easy;
+
+public class ReverseWords {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+    public static String reverseWords(String s) {
+        // write your code here
+    	StringBuilder builder = new StringBuilder();
+    	String[] words = s.split(" ");
+    	return builder.toString();
+    }
+    
+    public static String reverse(String s) {
+    	StringBuilder reverser = new StringBuilder(s);
+    	return reverser.reverse();
+    } 
+
+}

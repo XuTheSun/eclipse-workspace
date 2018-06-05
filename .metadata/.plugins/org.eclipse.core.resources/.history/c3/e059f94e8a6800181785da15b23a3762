@@ -1,0 +1,33 @@
+package com.guanxu.easy;
+
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
+public class LetterCasePermutation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		for(String s : letterCasePermutation("a45g53s")) {
+			System.out.println(s);
+		}
+	}
+	
+    public static List<String> letterCasePermutation(String S) {
+        // write your code here
+    	Queue<String> result = new LinkedList<>();
+    	result.add(S);
+    	for(int i = 0;i < S.length(); i++) {
+    		char c = S.charAt(i);
+    		if(Character.isLetter(c)) {
+    			int size = result.size();
+    			for(int j = 0; j < size; j++) {
+    				String temp = result.poll();
+    				result.add(temp.substring(0, i)+ Character.toLowerCase(c)+temp.substring(i+1, temp.length()));
+    				result.add(temp.substring(0, i)+ Character.toUpperCase(c)+temp.substring(i+1, temp.length()));
+    			}
+    		}
+    	}
+    	return (List<String>) result;
+    }
+}

@@ -1,0 +1,31 @@
+package com.guanxu.easy;
+
+public class PrimeNumberOfSetBitsInBinaryRepresentation {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.print(isPrime(499));
+	}
+	
+    public int countPrimeSetBits(int L, int R) {
+        // Write your code here
+    	int count = 0;
+    	for(int i = 0; i < R - L + 1; i++) {
+    		if(isBitPrime(L + i))
+    			count++;
+    	}
+    	return count;
+    }
+    
+    public static boolean isBitPrime(int num) {
+    	return false;
+    }
+    
+    public static boolean isPrime(int num) {
+    	for(int i = 2; i <= Math.sqrt(num); i++) {
+    		if(num % i == 0)
+    			return false;
+    	}
+    	return true;
+    }
+}
