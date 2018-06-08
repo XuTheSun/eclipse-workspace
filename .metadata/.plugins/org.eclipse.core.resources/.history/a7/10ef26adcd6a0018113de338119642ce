@@ -1,0 +1,14 @@
+package com.guanxu.easy;
+
+public class Palindrome {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+    public static boolean isPalindrome(int num) {
+        // write your code here
+    }
+
+}

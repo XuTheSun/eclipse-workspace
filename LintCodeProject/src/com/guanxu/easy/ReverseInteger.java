@@ -10,10 +10,8 @@ public class ReverseInteger {
     public int reverseInteger(int n) {
         // write your code here
     	StringBuilder builder;
-    	boolean isNag = false;
     	if(n < 0) {
     		builder= new StringBuilder((n+"").substring(1));
-    		isNag = true;
     	}else {
     		builder = new StringBuilder(n + "");
     	}
